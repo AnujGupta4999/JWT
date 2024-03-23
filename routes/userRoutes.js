@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const { userRegisterValidate, userLoginValidate } = require('../utils/userValidation')
-// const { ensureAuthenticated } = require('../utils/auth');
-/* GET users listing. */
+const { ensureAuthenticated } = require('../utils/auth');
+
 const { registerUser , loginUser , getAllUsers} = require('../controllers/userController');
 const { ensureAuthenticated } = require('../utils/auth');
 
